@@ -1,0 +1,9 @@
+from django.http import HttpResponse
+from books.models import Person
+
+def hola(request):
+	a = "hola"
+	person_list = Person.objects.all()
+	apellido = Person.objects.all()[1]
+
+	return HttpResponse(apellido, a)
